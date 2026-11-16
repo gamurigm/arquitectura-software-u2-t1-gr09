@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="900" viewBox="0 0 1360 900" role="img" aria-labelledby="title desc">
+  <title id="title">Propuesta visual del cliente desktop Atlas GR09</title>
+  <desc id="desc">Maqueta conceptual con datos ilustrativos. Navegación, ilustración de globo, tabla de países y ficha de Ecuador. No representa una aplicación implementada.</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#174F47"/><stop offset="1" stop-color="#0C3934"/></linearGradient>
+    <style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#172D2B}.muted{fill:#627773}.small{font-size:13px}.label{font-size:14px}.white{fill:#fff}.head{font-weight:600}.line{stroke:#DFE7E1;stroke-width:1}</style>
+    <clipPath id="globe"><circle cx="1117" cy="204" r="99"/></clipPath>
+  </defs>
+  <rect width="1360" height="900" rx="16" fill="#F5F6F2"/>
+  <rect width="1360" height="40" fill="#E8EDE7"/>
+  <circle cx="22" cy="20" r="7" fill="#12665B"/>
+  <text x="40" y="25" class="small head">Atlas GR09 · Explorador de países</text>
+  <text x="978" y="25" class="small muted">MAQUETA · DATOS ILUSTRATIVOS</text>
+  <path d="M1288 20h12m22-5v10m-5-5h10" stroke="#71827B" fill="none"/>
+  <rect x="0" y="40" width="210" height="860" fill="#FDFEFB"/>
+  <path d="M210 40v860" class="line"/>
+  <circle cx="42" cy="91" r="17" fill="#12665B"/>
+  <circle cx="42" cy="91" r="11" fill="none" stroke="#fff"/>
+  <path d="M31 91h22m-11-11c-7 7-7 15 0 22m0-22c7 7 7 15 0 22" fill="none" stroke="#fff"/>
+  <text x="68" y="89" font-size="21" class="head">Atlas</text>
+  <text x="69" y="108" class="small muted">PAÍSES DEL MUNDO</text>
+  <text x="24" y="163" class="small muted">EXPLORAR</text>
+  <rect x="16" y="182" width="177" height="46" rx="10" fill="#E4F0E9"/>
+  <rect x="31" y="197" width="16" height="15" rx="3" fill="none" stroke="#12665B" stroke-width="2"/>
+  <path d="M31 202h16m-10-5v15" stroke="#12665B"/>
+  <text x="60" y="211" font-size="15" fill="#12665B" class="head">Países</text>
+  <path d="M32 262v-10m7 10v-17m7 17v-23" stroke="#748A81" stroke-width="3"/>
+  <text x="60" y="260" font-size="15" class="muted">Reportes</text>
+  <path d="M24 786h161" class="line"/>
+  <text x="24" y="819" class="label head">Taller de arquitectura</text>
+  <text x="24" y="843" class="small muted">Java · MVC · MySQL</text>
+  <text x="24" y="866" class="small muted">GR09 / U2 T1</text>
+  <text x="244" y="81" class="small muted">EXPLORADOR / CATÁLOGO LOCAL</text>
+  <rect x="244" y="104" width="1082" height="207" rx="18" fill="url(#hero)"/>
+  <text x="273" y="152" class="small" fill="#BFE0CD" style="fill:#BFE0CD;letter-spacing:2px">UN MUNDO POR EXPLORAR</text>
+  <text x="273" y="200" font-size="35" class="white head">Países del mundo</text>
+  <text x="274" y="233" font-size="16" fill="#D0E7DA" style="fill:#D0E7DA">Consulta, organiza y descubre tus países guardados.</text>
+  <text x="274" y="271" class="small" style="fill:#BFE0CD">REST Countries → Java MVC → MySQL</text>
+  <circle cx="1117" cy="204" r="112" fill="#398879" opacity=".15"/>
+  <circle cx="1117" cy="204" r="99" fill="#286E60" stroke="#79BDA2" stroke-width="1.5"/>
+  <g clip-path="url(#globe)" fill="none" stroke="#78B69B" opacity=".65">
+    <ellipse cx="1117" cy="204" rx="50" ry="99"/><ellipse cx="1117" cy="204" rx="82" ry="99"/>
+    <ellipse cx="1117" cy="174" rx="94" ry="21"/><ellipse cx="1117" cy="225" rx="97" ry="24"/>
+    <path d="M1018 204h198m-99-99v198"/>
+  </g>
+  <path d="m1060 155 27-12 20 11 2 21-16 9-3 20-17 2-9-23-16-7Zm48 55 19-5 19 16-6 21-13 29-12-10 1-26Zm45-54 26-1 24 22-6 18-24-9-7 17-19-13 11-18Z" fill="#A8CFA1" opacity=".85"/>
+  <rect x="244" y="335" width="1082" height="72" rx="12" fill="#fff" stroke="#DFE7E1"/>
+  <text x="265" y="363" class="small muted">FUENTE DE LA TABLA</text>
+  <text x="265" y="388" font-size="17" class="head">MySQL · Países guardados</text>
+  <text x="675" y="363" class="small muted">ACCIONES EXTERNAS</text>
+  <text x="675" y="388" class="label">Importación y consulta a REST Countries</text>
+  <text x="244" y="449" font-size="23" class="head">Tu catálogo</text>
+  <rect x="982" y="423" width="146" height="40" rx="9" fill="#fff" stroke="#B9CEC1"/>
+  <text x="1000" y="449" class="label head">+ Nuevo país</text>
+  <rect x="1140" y="423" width="186" height="40" rx="9" fill="#12665B"/>
+  <text x="1161" y="449" class="label white head">↓ Importar países</text>
+  <rect x="244" y="484" width="352" height="43" rx="9" fill="#fff" stroke="#D8E2DA"/>
+  <circle cx="265" cy="503" r="6" fill="none" stroke="#8B9E94" stroke-width="1.5"/><path d="m270 508 5 5" stroke="#8B9E94"/>
+  <text x="289" y="511" class="label muted">Buscar en tus países...</text>
+  <rect x="608" y="484" width="216" height="43" rx="9" fill="#fff" stroke="#D8E2DA"/>
+  <text x="624" y="511" class="label">Todas las regiones</text><path d="m800 502 5 5 5-5" fill="none" stroke="#627773"/>
+  <rect x="836" y="484" width="151" height="43" rx="9" fill="#fff" stroke="#D8E2DA"/>
+  <text x="854" y="511" class="label head">Consultar API</text>
+  <rect x="244" y="549" width="744" height="273" rx="12" fill="#fff" stroke="#DCE5DF"/>
+  <path d="M245 592h742" class="line"/>
+  <text x="266" y="576" class="small muted head">PAÍS</text><text x="437" y="576" class="small muted head">CAPITAL</text>
+  <text x="567" y="576" class="small muted head">REGIÓN</text><text x="701" y="576" class="small muted head">POBLACIÓN</text><text x="872" y="576" class="small muted head">MONEDA</text>
+  <rect x="245" y="593" width="742" height="56" fill="#EAF5EE"/>
+  <rect x="263" y="612" width="27" height="17" fill="#FFCF3D"/><rect x="263" y="620" width="27" height="5" fill="#28589E"/><rect x="263" y="625" width="27" height="4" fill="#DB5A53"/>
+  <text x="303" y="625" class="label head">Ecuador</text><text x="437" y="625" class="label">Quito</text><text x="567" y="625" class="label">América</text><text x="701" y="625" class="label">18.000.000*</text><text x="872" y="625" class="label">USD</text>
+  <path d="M245 649h742" class="line"/>
+  <rect x="263" y="668" width="9" height="17" fill="#255491"/><rect x="272" y="668" width="9" height="17" fill="#F8FAF7"/><rect x="281" y="668" width="9" height="17" fill="#D55150"/>
+  <text x="303" y="681" class="label">France</text><text x="437" y="681" class="label">Paris</text><text x="567" y="681" class="label">Europa</text><text x="701" y="681" class="label">68.000.000*</text><text x="872" y="681" class="label">EUR</text>
+  <path d="M245 705h742" class="line"/>
+  <rect x="263" y="724" width="27" height="17" fill="#fff" stroke="#DBE3DD"/><circle cx="276.5" cy="732.5" r="5" fill="#C94D57"/>
+  <text x="303" y="737" class="label">Japan</text><text x="437" y="737" class="label">Tokyo</text><text x="567" y="737" class="label">Asia</text><text x="701" y="737" class="label">124.000.000*</text><text x="872" y="737" class="label">JPY</text>
+  <path d="M245 761h742" class="line"/>
+  <text x="265" y="796" class="small muted">* Cifras de ejemplo para visualizar el diseño; no son datos verificados.</text>
+  <rect x="1008" y="484" width="318" height="338" rx="12" fill="#fff" stroke="#DCE5DF"/>
+  <text x="1030" y="514" class="small muted">PAÍS SELECCIONADO</text>
+  <rect x="1030" y="531" width="63" height="40" rx="3" fill="#FFCF3D"/><rect x="1030" y="551" width="63" height="10" fill="#28589E"/><rect x="1030" y="561" width="63" height="10" fill="#DB5A53"/>
+  <text x="1110" y="551" font-size="23" class="head">Ecuador</text><text x="1110" y="574" class="small muted">ECU · América</text>
+  <path d="M1030 594h273" class="line"/>
+  <text x="1030" y="622" class="small muted">CAPITAL</text><text x="1030" y="646" font-size="17" class="head">Quito</text>
+  <text x="1030" y="679" class="small muted">MONEDA</text><text x="1030" y="703" class="label">USD · Dólar estadounidense</text>
+  <rect x="1030" y="736" width="125" height="39" rx="8" fill="#E8F2EA"/><text x="1070" y="761" class="label head">Editar</text>
+  <rect x="1167" y="736" width="135" height="39" rx="8" fill="#fff" stroke="#E4CBC8"/><text x="1204" y="761" class="label" style="fill:#A94D47">Eliminar</text>
+  <text x="1030" y="802" class="small muted">Bandera simplificada en la maqueta</text>
+  <text x="244" y="864" class="small muted">Diseño propuesto · Java Swing · GR09 · La aplicación todavía no está implementada</text>
+</svg>
