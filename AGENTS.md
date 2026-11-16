@@ -1,4 +1,4 @@
-# Taller U2 T1 GR09
+# Taller de consumo de APIs públicas GR09
 
 ## Alcance y referencias
 
@@ -10,10 +10,10 @@
 
 ## Directorios
 
-La raíz de este taller es `U2/T1`. Mantener estos nombres, numeración, espacios y subdirectorios documentales de la plantilla:
+La raíz de este taller es `U2/TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09`. Mantener estos nombres, numeración, espacios y subdirectorios documentales de la plantilla:
 
 ```text
-T1/
+TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09/
 ├── AGENTS.md
 ├── GR09_Paises.sws                    # Workspace real de PowerDesigner, pendiente
 ├── requisitos/                       # Enunciado original, conservar
