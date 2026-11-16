@@ -8,7 +8,7 @@
 
 **Decisiones del usuario:** desktop primero; organización de carpetas adaptada de la plantilla TI.1.1; AWS como plataforma cloud; workspace `.sws` en la raíz, configurado después. [AGENTS.md](../AGENTS.md) contiene el árbol y las reglas persistentes.
 
-Las rutas de implementación indicadas abajo son relativas a la raíz `U2/TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09`, salvo que se indique lo contrario. Ejecutar las etapas en orden y marcar las casillas solo después de comprobar sus resultados.
+Las rutas de implementación indicadas abajo son relativas a la raíz `U2/T1/TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09`, salvo que se indique lo contrario. Ejecutar las etapas en orden y marcar las casillas solo después de comprobar sus resultados.
 
 ## 1 Qué exige realmente el documento
 

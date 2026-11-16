@@ -10,11 +10,13 @@
 
 ## Directorios
 
-La raíz de este taller es `U2/TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09`. Mantener estos nombres, numeración, espacios y subdirectorios documentales de la plantilla:
+La raíz de este taller es `U2/T1/TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09`. Mantener estos nombres, numeración, espacios y subdirectorios documentales de la plantilla:
 
 ```text
 TI.2.1. PAO202651_CONSUMO_API_PUB_NRC36884_GR09/
+├── .gitignore
 ├── AGENTS.md
+├── AWs_bdd.md
 ├── GR09_Paises.sws                    # Workspace real de PowerDesigner, pendiente
 ├── requisitos/                       # Enunciado original, conservar
 ├── T1_consumo_api_pub_gr09/            # Proyecto existente y PASOS.md
