@@ -1,0 +1,17 @@
+# Compilación
+**/target/
+*.class
+*.log
+
+# Configuración local y credenciales
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+**/nbproject/private/
+
+# Archivos temporales
+~$*
+Thumbs.db
+.DS_Store
