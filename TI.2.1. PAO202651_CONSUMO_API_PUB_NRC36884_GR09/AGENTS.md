@@ -4,7 +4,7 @@
 
 - Este proyecto adapta la estructura de `U1/TI.1.1/TI.1.1. PAO202651_CELULAR_BDDLOCAL_RESTFUL_NRC36884_GR09` al taller de países. Ese proyecto es una referencia de solo lectura: reutilizar su organización de carpetas, no copiar sus archivos, nombres de Celulares, código ni datos.
 - Antes de implementar, leer `T1_consumo_api_pub_gr09/PASOS.md` y el documento original en `requisitos/`. El plan diferencia requisitos del taller, correcciones verificadas y decisiones de diseño.
-- Primera entrega: cliente de escritorio Java Swing, MVC, DAO, REST Countries y MySQL. El usuario confirmó desktop primero; el taller no exige implementar cuatro clientes.
+- Único cliente a implementar: aplicación de escritorio Java Swing con MVC, DAO, REST Countries y MySQL. No implementar clientes web, móvil ni consola; sus carpetas solo reservan la estructura de la plantilla.
 - Conservar el proyecto web existente `T1_consumo_api_pub_gr09/` hasta acordar expresamente su reorganización. El nuevo proyecto Maven desktop irá en `04. CLIESC/T1_consumo_api_pub_gr09_desktop/`.
 - Las carpetas de otros clientes, compartidos y servidor reservan su ubicación; su existencia no amplía el alcance.
 
