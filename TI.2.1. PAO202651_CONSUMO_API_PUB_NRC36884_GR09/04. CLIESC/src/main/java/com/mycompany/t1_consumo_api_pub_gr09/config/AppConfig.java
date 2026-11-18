@@ -12,7 +12,10 @@ import java.util.Properties;
 public record AppConfig(String dbUrl, String dbUser, String dbPassword, String countriesApiKey) {
 
     public static AppConfig fromEnvironment() {
-        Path envFile = Path.of("../../.env");
+        Path envFile = Path.of("../.env");
+        if (Files.notExists(envFile)) {
+            envFile = Path.of("../../.env");
+        }
         if (Files.notExists(envFile)) {
             envFile = Path.of(".env");
         }

@@ -11,11 +11,11 @@ Aplicación Java Swing para consultar REST Countries, guardar países en MySQL y
 
 ## Preparar MySQL
 
-Ejecuta `../../03. BDD/01_crear_api_paises.sql` en MySQL Workbench. Configura el acceso de red y el usuario de aplicación en AWS antes de usar una base RDS. El script crea la base y la tabla si aún no existen y no elimina datos.
+Ejecuta `../03. BDD/01_crear_api_paises.sql` en MySQL Workbench. Configura el acceso de red y el usuario de aplicación en AWS antes de usar una base RDS. El script crea la base y la tabla si aún no existen y no elimina datos.
 
 ## Configuración externa
 
-La aplicación lee el archivo `.env` situado en la raíz del taller, dos niveles por encima de este proyecto Maven. También puedes definir estas variables de entorno en la sesión que inicia NetBeans; tienen prioridad sobre el archivo:
+La aplicación lee el archivo `.env` situado en la raíz del taller, un nivel por encima de este proyecto Maven. También puedes definir estas variables de entorno en la sesión que inicia NetBeans; tienen prioridad sobre el archivo:
 
 | Variable | Uso |
 | --- | --- |
@@ -37,7 +37,7 @@ El escritorio puede abrirse sin configuración para revisar la interfaz, pero la
 
 ## Ejecutar
 
-Abre `04. CLIESC/T1_consumo_api_pub_gr09_desktop` en Apache NetBeans y usa **Run Project**. El proyecto es Maven JAR y no requiere desplegar el WAR Jakarta EE que permanece en `T1_consumo_api_pub_gr09`.
+Abre `04. CLIESC` en Apache NetBeans y usa **Run Project**. El proyecto es Maven JAR.
 
 La integración usa el contrato REST Countries v5; si la API devuelve el bloque de datos de demostración, el cliente lo rechaza para importaciones reales. La descarga de banderas usa el CDN de banderas enlazado en la documentación oficial.
 
