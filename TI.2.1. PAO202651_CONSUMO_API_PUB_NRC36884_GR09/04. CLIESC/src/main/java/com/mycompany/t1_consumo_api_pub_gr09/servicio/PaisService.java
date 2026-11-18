@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.util.List;
 
 public interface PaisService {
-    List<Pais> obtenerTodos() throws IOException, InterruptedException;
+    Catalogo obtenerTodos() throws IOException, InterruptedException;
 
     List<Pais> buscarPorNombre(String nombre) throws IOException, InterruptedException;
+
+    record Catalogo(List<Pais> paises, int sinCodigoIso) {
+    }
 }

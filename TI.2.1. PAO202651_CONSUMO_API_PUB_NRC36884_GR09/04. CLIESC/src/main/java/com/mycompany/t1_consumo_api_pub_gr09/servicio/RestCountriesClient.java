@@ -40,7 +40,7 @@ public final class RestCountriesClient implements PaisService {
     }
 
     @Override
-    public List<Pais> obtenerTodos() throws IOException, InterruptedException {
+    public Catalogo obtenerTodos() throws IOException, InterruptedException {
         return obtenerPaginas("", null);
     }
 
@@ -49,14 +49,15 @@ public final class RestCountriesClient implements PaisService {
         if (nombre == null || nombre.isBlank()) {
             throw new IllegalArgumentException("Escribe un nombre antes de consultar la API.");
         }
-        return obtenerPaginas("/name", nombre.trim());
+        return obtenerPaginas("/name", nombre.trim()).paises();
     }
 
-    private List<Pais> obtenerPaginas(String endpoint, String consulta) throws IOException, InterruptedException {
+    private Catalogo obtenerPaginas(String endpoint, String consulta) throws IOException, InterruptedException {
         config.requireCountriesApiKey();
         List<Pais> paises = new ArrayList<>();
         Set<String> codigosVistos = new HashSet<>();
         int offset = 0;
+        int sinCodigoIso = 0;
         boolean hayMas = true;
         while (hayMas) {
             String query = "?limit=" + LIMITE_PAGINA
@@ -66,9 +67,10 @@ public final class RestCountriesClient implements PaisService {
                 query += "&q=" + URLEncoder.encode(consulta, StandardCharsets.UTF_8);
             }
             Page page = solicitar(endpoint + query, offset);
-            if (page.paises().isEmpty() && page.hayMas()) {
+            if (page.recibidos() == 0 && page.hayMas()) {
                 throw new IOException("REST Countries indicó que hay más páginas, pero devolvió una página vacía.");
             }
+            sinCodigoIso += page.recibidos() - page.paises().size();
             for (Pais pais : page.paises()) {
                 if (!codigosVistos.add(pais.codigoIso())) {
                     throw new IOException("La paginación repitió el código " + pais.codigoIso() + "; no se guardó una importación parcial.");
@@ -77,13 +79,10 @@ public final class RestCountriesClient implements PaisService {
             }
             hayMas = page.hayMas();
             if (hayMas) {
-                if (page.paises().size() < 1) {
-                    throw new IOException("La paginación de REST Countries no avanzó.");
-                }
-                offset += page.paises().size();
+                offset += page.recibidos();
             }
         }
-        return List.copyOf(paises);
+        return new Catalogo(List.copyOf(paises), sinCodigoIso);
     }
 
     private Page solicitar(String path, int offset) throws IOException, InterruptedException {
@@ -122,13 +121,17 @@ public final class RestCountriesClient implements PaisService {
             if (!element.isJsonObject()) {
                 throw new IOException("REST Countries devolvió un país con estructura inválida.");
             }
+            String codigo = texto(objeto(element.getAsJsonObject(), "codes").get("alpha_3"));
+            if (codigo != null && codigo.isBlank()) {
+                continue;
+            }
             try {
                 paises.add(mapearPais(element.getAsJsonObject()));
             } catch (IllegalArgumentException error) {
                 throw new IOException("No se pudo validar un registro de REST Countries: " + error.getMessage(), error);
             }
         }
-        return new Page(List.copyOf(paises), more.getAsBoolean());
+        return new Page(List.copyOf(paises), objects.size(), more.getAsBoolean());
     }
 
     private static Pais mapearPais(JsonObject pais) throws IOException {
@@ -269,6 +272,6 @@ public final class RestCountriesClient implements PaisService {
         };
     }
 
-    private record Page(List<Pais> paises, boolean hayMas) {
+    private record Page(List<Pais> paises, int recibidos, boolean hayMas) {
     }
 }

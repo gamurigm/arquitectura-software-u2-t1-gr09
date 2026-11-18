@@ -122,7 +122,7 @@ public final class PaisDAO {
                     insertados++;
                 }
                 connection.commit();
-                return new ResultadoImportacion(paises.size(), insertados, omitidos);
+                return new ResultadoImportacion(paises.size(), insertados, omitidos, 0);
             } catch (SQLException | RuntimeException error) {
                 try {
                     connection.rollback();

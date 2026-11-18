@@ -35,11 +35,14 @@ public final class PaisController {
     }
 
     public ResultadoImportacion importarPaises() throws IOException, InterruptedException, SQLException {
-        List<Pais> paises = countriesClient.obtenerTodos();
+        PaisService.Catalogo catalogo = countriesClient.obtenerTodos();
+        List<Pais> paises = catalogo.paises();
         if (paises.isEmpty()) {
             throw new IOException("REST Countries no devolvió países; no se realizó ninguna escritura.");
         }
-        return paisDAO.importar(paises);
+        ResultadoImportacion resultado = paisDAO.importar(paises);
+        return new ResultadoImportacion(resultado.recibidos() + catalogo.sinCodigoIso(),
+                resultado.insertados(), resultado.omitidos(), catalogo.sinCodigoIso());
     }
 
     public ResultadoImportacion guardarResultadoApi(Pais pais) throws SQLException {

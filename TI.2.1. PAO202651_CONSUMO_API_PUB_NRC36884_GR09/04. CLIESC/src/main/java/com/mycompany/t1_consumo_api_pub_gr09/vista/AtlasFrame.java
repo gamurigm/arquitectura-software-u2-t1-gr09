@@ -690,7 +690,8 @@ public final class AtlasFrame extends JFrame {
         ejecutar("Consultando páginas de REST Countries…", controller::importarPaises, resultado -> {
             JOptionPane.showMessageDialog(this,
                     "Registros recibidos: " + resultado.recibidos() + "\nPaíses nuevos: " + resultado.insertados()
-                    + "\nYa existentes conservados: " + resultado.omitidos(),
+                    + "\nYa existentes conservados: " + resultado.omitidos()
+                    + "\nSin código ISO alfa-3, omitidos: " + resultado.sinCodigoIso(),
                     "Importación finalizada", JOptionPane.INFORMATION_MESSAGE);
             refrescarCatalogo();
         }, true);
