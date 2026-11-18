@@ -15,7 +15,7 @@ Ejecuta `../../03. BDD/01_crear_api_paises.sql` en MySQL Workbench. Configura el
 
 ## Configuración externa
 
-Define estas variables de entorno en la sesión que inicia NetBeans:
+La aplicación lee el archivo `.env` situado en la raíz del taller, dos niveles por encima de este proyecto Maven. También puedes definir estas variables de entorno en la sesión que inicia NetBeans; tienen prioridad sobre el archivo:
 
 | Variable | Uso |
 | --- | --- |
@@ -24,7 +24,7 @@ Define estas variables de entorno en la sesión que inicia NetBeans:
 | `DB_PASSWORD` | Contraseña de ese usuario |
 | `REST_COUNTRIES_API_KEY` | Token para la cabecera `Authorization: Bearer` |
 
-No guardes valores reales en este README, el código, las capturas ni Git. En PowerShell puedes definirlos en una terminal antes de iniciar NetBeans:
+En `.env`, escribe una variable por línea con el formato `NOMBRE=valor`, sin comillas. El archivo está excluido de Git. No guardes valores reales en este README, el código, las capturas ni Git. En PowerShell puedes definirlos en una terminal antes de iniciar NetBeans:
 
 ```powershell
 $env:DB_URL = 'jdbc:mysql://HOST:3306/api_paises?sslMode=VERIFY_IDENTITY'

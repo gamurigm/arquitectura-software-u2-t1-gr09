@@ -1,5 +1,9 @@
 package com.mycompany.t1_consumo_api_pub_gr09.config;
 
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,11 +12,28 @@ import java.util.Properties;
 public record AppConfig(String dbUrl, String dbUser, String dbPassword, String countriesApiKey) {
 
     public static AppConfig fromEnvironment() {
+        Path envFile = Path.of("../../.env");
+        if (Files.notExists(envFile)) {
+            envFile = Path.of(".env");
+        }
+        Properties fileValues = new Properties();
+        if (!Files.notExists(envFile)) {
+            try {
+                for (String line : Files.readAllLines(envFile)) {
+                    int separator = line.indexOf('=');
+                    if (separator > 0 && !line.stripLeading().startsWith("#")) {
+                        fileValues.setProperty(line.substring(0, separator).trim(), line.substring(separator + 1).trim());
+                    }
+                }
+            } catch (IOException ex) {
+                throw new UncheckedIOException("No se pudo leer el archivo .env", ex);
+            }
+        }
         return new AppConfig(
-                System.getenv("DB_URL"),
-                System.getenv("DB_USER"),
-                System.getenv("DB_PASSWORD"),
-                System.getenv("REST_COUNTRIES_API_KEY")
+                System.getenv().getOrDefault("DB_URL", fileValues.getProperty("DB_URL")),
+                System.getenv().getOrDefault("DB_USER", fileValues.getProperty("DB_USER")),
+                System.getenv().getOrDefault("DB_PASSWORD", fileValues.getProperty("DB_PASSWORD")),
+                System.getenv().getOrDefault("REST_COUNTRIES_API_KEY", fileValues.getProperty("REST_COUNTRIES_API_KEY"))
         );
     }
 
